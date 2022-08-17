@@ -5,7 +5,7 @@ import { resolvePath } from './resolve-path';
 import { setObjectKeys, setObjectValue } from './set-object-keys';
 import { extractDataFromResponse } from './extract-data-from-response';
 
-export interface ApiCall<T> extends Promise<AxiosResponse<T>>{
+export interface ApiCall<T> extends Promise<T>{
   data?: T;
   loading: boolean;
   error?: Error;
